@@ -6,11 +6,18 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     posts : [...posts],
-    cart : []
+    cart : [],
+    showCart : false
   },
   mutations: {
+    modifyCardState(state){
+      state.showCart = !state.showCart;
+    }
   },
   actions: {
+    updateCardState(context){
+      context.commit('modifyCardState');
+    }
   },
   modules: {
   }

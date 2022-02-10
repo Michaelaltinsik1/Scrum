@@ -1,6 +1,6 @@
 <template>
     <section class="cart-view">
-        <button class="close-cart">X</button>
+        <button @click="toogleCart" class="close-cart">X</button>
         <h2 class="order">Order</h2>
         <article v-for="post in posts" :key="post.id" class="shopping-item">                 
             <h2>{{post.Title}}</h2>
@@ -22,6 +22,11 @@ export default {
     data(){
         return{
             posts : [...posts]
+        }
+    },
+    methods:{
+        toogleCart(){
+            this.$store.dispatch('updateCardState');
         }
     }
 

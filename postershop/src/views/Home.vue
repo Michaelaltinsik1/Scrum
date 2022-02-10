@@ -3,9 +3,12 @@
 
 
   <header>
-    <div class="burger-menu"></div>
+    <div class="container">
+      <div class="burger-menu"></div>
+      <button class="cart" @click="toogleCart">Cart</button>
+      <Cart class="cart-view" v-if="getCartState"/>
+    </div>
     <h1>Poster Shop</h1>
-    <svg data-testid="AddShoppingCartIcon">AddShoppingCartIcon</svg>
   </header>
   <main>
     <Card v-for="card in getCards" :key="card.id" :card="card"/>
@@ -37,13 +40,21 @@
 </template>
 <script>
 import Card from '../components/card.vue'
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import Cart from '../components/Cart.vue'
 
 export default {
-  components:{Card},
+  components:{Card,Cart},
   computed:{
     getCards(){
       return this.$store.state.posts;
+    },
+    getCartState(){
+      return this.$store.state.showCart;
+    }
+  },
+  methods:{
+    toogleCart(){
+      this.$store.dispatch('updateCardState');
     }
   }
 }
@@ -69,20 +80,33 @@ background-position: 50% 100%;
 text-align: center;
 display: flex;
 align-items: center;
-justify-content: center;
+justify-content: space-between;
 flex-direction: column;
 font-size: 2.5rem;
 position: relative;
+} 
+header h1{
+  margin: auto 0;
 }
-.burger-menu{
-  position: absolute;
-  align-self: flex-start;
-  top: 0%;
-  margin: 1rem;
+.container{
+  display: flex;
+  min-width: 100%;
+  justify-content: space-between;
+}
+.cart,.burger-menu{
+  margin: 2rem;
   width: 30px;
-  height: 30px;
-  background-image: url(../assets/navicon.svg);
+  height: 30px; 
 }
+.cart{
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.burger-menu{ 
+  background-image: url(../assets/navicon.svg);
+} 
 main{
   /* Placeholder height, it doesn't need to be there */
   /* height: 40rem; */
@@ -115,6 +139,10 @@ footer>div{
 .img-wrap{
  display: flex;
  justify-content: space-around;
+}
+.cart-view{
+  position: absolute;
+  right: 0;
 }
 
 </style>

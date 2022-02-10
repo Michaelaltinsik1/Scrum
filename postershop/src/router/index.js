@@ -1,17 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Cart from '@/components/Cart.vue'
 import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/Cart',
-    name: 'Cart',
-    component: Cart
-  },
   {
     path: '/',
     name: 'Home',
