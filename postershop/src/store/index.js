@@ -12,11 +12,17 @@ export default new Vuex.Store({
   mutations: {
     modifyCardState(state){
       state.showCart = !state.showCart;
+    },
+    addToCart(state, cartItem){
+      state.cart.push(cartItem);
     }
   },
   actions: {
     updateCardState(context){
       context.commit('modifyCardState');
+    },
+    handleNewCartItem(context, newCartItem){
+      context.commit('addToCart',newCartItem);
     }
   },
   modules: {

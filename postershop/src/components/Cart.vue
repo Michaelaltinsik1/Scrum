@@ -2,26 +2,28 @@
     <section class="cart-view">
         <button @click="toogleCart" class="close-cart">X</button>
         <h2 class="order">Order</h2>
-        <article v-for="post in posts" :key="post.id" class="shopping-item">                 
-            <h2>{{post.Title}}</h2>
-            <p>{{post.About}}</p>
-            <button>X</button>
-        </article>
-        <article class="shopping-info">
-            <h2>Your order</h2>
-            <p>Fee: 0$</p>
-            <p>Total price: 0$</p>
-        </article>
-        <router-link  class="payment-view-button"  to="" tag="button">Prooceed to Checkout</router-link>
+        <section class="shopping-container" v-if = "getCartData.length > 0">              
+            <Card :card="cartItem" :cartItem = "true" v-for="(cartItem, index) of getCartData" :key="index" class="shopping-item"/>
+            <article class="shopping-info">
+                <h2>Your order</h2>
+                <p>Fee: 0$</p>
+                <p>Total price: 0$</p>
+            </article>
+            <router-link  class="payment-view-button"  to="" tag="button">Prooceed to Checkout</router-link>
+        </section>
+        <p v-else>The cart is empty</p>
     </section>
 </template>
 
 <script>
-import posts from '@/assets/posts.json'
+import Card from './card.vue'
 export default {
-    data(){
-        return{
-            posts : [...posts]
+    components:{Card},
+    computed:{
+        getCartData(){
+            console.log(this.$store.state.cart)
+            return this.$store.state.cart;
+            
         }
     },
     methods:{
@@ -43,6 +45,15 @@ export default {
         margin: 0;
         padding: 0;
     }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    .cart-item{
+        align-self: center;
+    }
     .cart-view{
         display: flex;
         flex-direction: column;
@@ -50,7 +61,7 @@ export default {
         padding: 2rem;
         padding-top: 0;
         background-color: $primary-background;
-        max-width: 40%;
+        max-width: 25%;
         border-radius: 0.5rem;
         
         .close-cart{
@@ -91,7 +102,7 @@ export default {
             min-width: 80%;
             box-sizing: border-box;
             background-color: $secondary-background;
-            align-self: stretch;
+            
             padding: 1.3rem;
             border-radius: 0.5rem;
             margin: 2rem 3rem;
@@ -108,6 +119,11 @@ export default {
             color: $payment-view-button-text;
             padding: 1.2rem;
             border-radius: 0.5rem;
+        }
+        .shopping-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
 </style>
