@@ -62,6 +62,7 @@ export default {
         padding-top: 0;
         background-color: $primary-background;
         max-width: 25%;
+        min-width: 25%;
         border-radius: 0.5rem;
         
         .close-cart{
