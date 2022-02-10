@@ -1,13 +1,14 @@
 <template>
   <div class="home">
 
-    
+
   <header>
     <div class="burger-menu"></div>
-<h1>Poster Shop</h1>
+    <h1>Poster Shop</h1>
+    <svg data-testid="AddShoppingCartIcon">AddShoppingCartIcon</svg>
   </header>
   <main>
-
+    <Card v-for="card in getCards" :key="card.id" :card="card"/>
   </main>
   <footer>
   <div class="footer-nav">
@@ -34,6 +35,20 @@
 
   </div>
 </template>
+<script>
+import Card from '../components/card.vue'
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+
+export default {
+  components:{Card},
+  computed:{
+    getCards(){
+      return this.$store.state.posts;
+    }
+  }
+}
+</script>
+
 <style scoped>
 *{
  
@@ -71,8 +86,11 @@ position: relative;
 main{
   /* Placeholder height, it doesn't need to be there */
   /* height: 40rem; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   background: black;
-  padding: 6rem 0 6rem 0;
+  padding: 2rem 8rem;
+  
 }
 footer{
   color: white;

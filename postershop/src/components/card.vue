@@ -2,8 +2,8 @@
   <section class="wrapper">
       <img src="" alt="">
     <article class="info">
-        <h1>{{}}</h1>
-        <p>{{}}</p>
+        <h1>{{card.Title}}</h1>
+        <p>{{card.About}}</p>
         <button>Oh, take my money!</button>
     </article>
   </section>
@@ -11,29 +11,27 @@
 
 <script>
 export default {
-
+  props:['card']
 }
 </script>
 
 <style scoped>
 .wrapper{
-    max-width: 484px;
-    height: 770px;
+    max-width: 200px;
+    height: 200px;
 }
 img{
-    max-width: 484px;
+    /* max-width: 484px;
     height: 484px;
-    background-color: cadetblue;
+    background-color: cadetblue; */
 }
-.info{
+/* .info{
     
+} */
+h1,p{
+  color: #fff;
 }
-h1{
 
-}
-p{
-
-}
 
 
 </style>
