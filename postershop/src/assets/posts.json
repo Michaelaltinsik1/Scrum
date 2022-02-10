@@ -2,57 +2,67 @@
   {
     "id": 1,
     "Title": "Austronaut",
-    "About": "Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha."
- 
+    "About": "Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha.",
+    "Amount": 0 
   },
   {
     "id": 2,
     "Title": "Ninjar",
     "About": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercat squid skateboard readymade."
+    ,"Amount": 0
   },
   {
     "id": 3,
     "Title": "Nerd",
     "About": "Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr."
+    ,"Amount": 0
   },
   {
     "id": 4,
     "Title": "Läkare",
     "About": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade."
+    ,"Amount": 0
   },
   {
     "id": 5,
     "Title": "Gitarrknäppare",
     "About": "Tacos squid retro, activated charcoal next level kitsch vexillologist ennui. Vice offal iceland humblebrag, single-origin coffee cliche vegan adaptogen jean shorts yr."
+    ,"Amount": 0
   },
   {
     "id": 6,
     "Title": "Snorklare",
     "About": "Man braid hammock listicle retro crucifix, tumeric poutine kale chips letterpress woke. Activated charcoal jianbing coloring book direct trade tote."
+    ,"Amount": 0
   },
   {
     "id": 7,
     "Title": "Clown",
     "About": "Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha."
+    ,"Amount": 0
   },
   {
     "id": 8,
     "Title": "Polis",
     "About": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade."
+    ,"Amount": 0
   },
   {
     "id": 9,
     "Title": "Fe",
     "About": "Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha."
+    ,"Amount": 0
   },
   {
     "id": 10,
     "Title": "Fotograf",
     "About": "Disrupt blue bottle kombucha quinoa live-edge ennui literally flexitarian cloud bread gochujang sustainable. Ramps thundercats squid skateboard readymade."
+    ,"Amount": 0
   },
   {
     "id": 11,
     "Title": "Personlig tränare",
     "About": "Marfa artisan pok pok, coloring book shaman intelligentsia meh kinfolk affogato raw denim direct trade subway tile kombucha."
+    ,"Amount": 0
   }
 ]

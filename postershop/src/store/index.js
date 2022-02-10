@@ -14,6 +14,14 @@ export default new Vuex.Store({
       state.showCart = !state.showCart;
     },
     addToCart(state, cartItem){
+      // state.cart.push(cartItem);
+      // let checkPresense = state.cart.hasOwnProperty('id') && state.cart['id'] == cartItem.id
+      for(let obj of state.cart){
+        if(obj.id === cartItem.id){
+          obj.Amount++;
+          return;
+        }
+      }
       state.cart.push(cartItem);
     }
   },
