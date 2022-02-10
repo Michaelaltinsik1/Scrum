@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+
     
   <header>
     <div class="burger-menu"></div>
@@ -30,6 +31,7 @@
     </div>
   </div>
   </footer>
+
   </div>
 </template>
 <style scoped>
