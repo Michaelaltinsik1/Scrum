@@ -65,7 +65,9 @@ export default {
  
   padding: 0;
 }
-
+p{
+  margin: 0.8rem;
+}
 .home {
    margin: auto;
   max-width: 90rem;
@@ -125,6 +127,10 @@ footer{
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
+}
+.footer-nav p, .footer-adress p{
+  font-size: 0.8rem;
+  margin: 0.3rem;
 }
 h2{
    font-size: 2.1rem;

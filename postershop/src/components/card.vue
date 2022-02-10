@@ -4,8 +4,8 @@
     <article class="info">
         <h2>{{card.Title}}</h2>
         <p>{{card.About}}</p>
-        <button v-if="!cartItem" @click="addToCart(card)">Oh, take my money!</button>
-        <button v-else>X</button>
+        <button class="add-to-cart" v-if="!cartItem" @click="addToCart(card)">Oh, take my money!</button>
+        <button class="remove-from-cart" v-else>X</button>
     </article>
   </section>
 </template>
@@ -44,9 +44,22 @@ h2{
 }
 p{
   font-size: 0.8rem;
+  margin: 1rem 0;
+  line-height: 1.2rem;
 }
 h2,p{
   color: #fff;
+}
+.add-to-cart{
+  padding: 0.3rem 0.5rem;
+  background-color: #E83F57;
+   color: #fff;
+}
+.remove-from-cart{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 
