@@ -22,7 +22,9 @@ export default new Vuex.Store({
           return;
         }
       }
+      cartItem.Amount++;
       state.cart.push(cartItem);
+      
     }
   },
   actions: {
